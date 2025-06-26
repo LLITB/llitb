@@ -11,7 +11,12 @@ export default function Hero({ }: Props) {
     return (
         <section id="hero" className='grid grid-col-2 lg:grid-cols-4 grid-rows-3 h-full lg:h-screen w-screen '>
             <div className='col-span-2 row-span-2 row-start-1 col-start-2 max-w-5xl w-full mx-auto overflow-hidden my-8 lg:my-0'>
-                <VideoText src="/video/black_men_5.webm"
+                <VideoText
+                    src={[
+                        { src: "/video/black_men_5.mp4", type: "video/mp4" },
+                        { src: "/video/black_men_5.webm", type: "video/webm" }
+                    ]}
+
                     className="uppercase text-4xl lg:text-6xl ">LIVE LIFE</VideoText>
             </div>
             <div className='col-span-2 row-span-2 col-start-2 row-start-2 max-w-5xl w-full h-8 mx-auto bg-neutral-900 mt-14 z-50'>

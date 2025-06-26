@@ -3,29 +3,38 @@
 import { cn } from "@/lib/utils";
 import React, { ElementType, ReactNode, useEffect, useState } from "react";
 
+export interface VideoSource {
+    src: string;
+    type: string;
+}
+
 export interface VideoTextProps {
     /**
-     * The video source URL
+     * A single video source URL (string) or an array of video sources
      */
-    src: string;
+    src: string | VideoSource[];
     /**
      * Additional className for the container
      */
     className?: string;
     /**
      * Whether to autoplay the video
+     * @default true
      */
     autoPlay?: boolean;
     /**
      * Whether to mute the video
+     * @default true
      */
     muted?: boolean;
     /**
      * Whether to loop the video
+     * @default true
      */
     loop?: boolean;
     /**
      * Whether to preload the video
+     * @default "auto"
      */
     preload?: "auto" | "metadata" | "none";
     /**
@@ -34,7 +43,7 @@ export interface VideoTextProps {
     children: ReactNode;
     /**
      * Font size for the text mask (in viewport width units)
-     * @default 10
+     * @default 20
      */
     fontSize?: string | number;
     /**
@@ -97,9 +106,13 @@ export function VideoText({
 
     const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`;
 
+    // Render multiple source elements if `src` is an array
+    const videoSources = Array.isArray(src)
+        ? src.map((source) => <source key={source.src} src={source.src} type={source.type} />)
+        : <source src={src} />;
+
     return (
         <Component className={cn(`relative size-full`, className)}>
-            {/* Create a container that masks the video to only show within text */}
             <div
                 className="absolute inset-0 flex items-center justify-center"
                 style={{
@@ -119,14 +132,12 @@ export function VideoText({
                     muted={muted}
                     loop={loop}
                     preload={preload}
-                    playsInline
+                    playsInline // Crucial for iOS inline playback
                 >
-                    <source src={src} />
+                    {videoSources}
                     Your browser does not support the video tag.
                 </video>
             </div>
-
-            {/* Add a backup text element for SEO/accessibility */}
             <span className="sr-only">{content}</span>
         </Component>
     );

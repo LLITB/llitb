@@ -59,7 +59,11 @@ export const metadata: Metadata = {
     "money stress solutions",
     "financial coaching",
     "online financial workshop",
-  ]
+  ],
+  metadataBase: new URL('https://livelifeintheblack.com'),
+  openGraph: {
+    images: '/opengraph-image.jpg'
+  }
 }
 
 export default function RootLayout({

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import teaching from '@/public/images/teaching.webp';
+import leslie from '@/public/images/headshot.webp'
 const About = () => {
     return (
         <section id="about" className="h-full my-10 mx-5 flex items-center justify-center">
@@ -16,12 +17,6 @@ const About = () => {
                             stress, and how to make money decisions in the middle of so much uncertainty
                             —uncertainty about income, family, the future… everything.
                         </p>
-
-                    </div>
-                    <div className='col-start-1 md:col-start-3 col-span-3 md:col-span-1 overflow-hidden justify-items-center'>
-                        <Image src={teaching} alt="Teaching" width={600} height={420} />
-                    </div>
-                    <div className='col-start-1 col-span-3 space-y-4'>
                         <p className='font-light text-lg leading-8'>
                             As I reflected on where I was, what I had accomplished, and where I wanted to
                             go, I realized even people who are trained in the world of finance - people who
@@ -30,6 +25,12 @@ const About = () => {
                             Sometimes it takes a major life event to snap us out of autopilot and make us
                             realize that planning for the future isn’t optional - it’s essential.
                         </p>
+                    </div>
+                    <div className='col-start-1 md:col-start-3 col-span-3 md:col-span-1 overflow-hidden justify-items-center'>
+                        <Image src={leslie} alt="Leslie" width={476} height={693} />
+                    </div>
+                    <div className='col-start-1 col-span-3 space-y-4'>
+
                         <p className='font-light text-lg leading-8'>
                             That was true for me. I had to develop the discipline of doing the hard work -
                             figuring out my next career move, managing my budget, trying to get my

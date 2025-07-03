@@ -37,9 +37,29 @@ export const metadata: Metadata = {
       },
     ],
   },
-  title: "Financial Literacy Workshop for Young Pros | Live Life In The Black",
+  title: {
+    default: "Stop Money Stress | Financial Literacy for Young Professionals",
+    template: "%s | Live Life In The Black",
+  },
   description:
-    "Stop money stress! Join the waitlist for our financial literacy workshop designed for young professionals. Learn budgeting, saving, investing & more. Get early access!",
+    "Master your money with our financial literacy workshop for young professionals. Learn budgeting, investing, and debt management to build a secure future. Join the waitlist for early access!",
+  keywords: [
+    "financial literacy for young professionals",
+    "money management workshop",
+    "budgeting for young professionals",
+    "investing for beginners",
+    "financial education online",
+    "personal finance workshop",
+    "saving strategies",
+    "debt management",
+    "wealth building for young adults",
+    "financial planning basics",
+    "early career finance",
+    "financial freedom",
+    "money stress solutions",
+    "financial coaching",
+    "online financial workshop",
+  ]
 }
 
 export default function RootLayout({

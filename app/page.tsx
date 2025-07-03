@@ -10,9 +10,12 @@ import Hero from '@/components/sections/Hero'
 import Problem from '@/components/sections/Problem'
 import Solutions from "@/components/sections/Solutions"
 import Help from "@/components/sections/Help"
-import Proof from "@/components/sections/Proof"
+import Proof from "@/components/sections/Proof";
+import Testimonials from "@/components/sections/Testimonials";
+import About from "@/components/sections/About";
 // import Workshop from "@/components/sections/Workshop"
 import CTA from "@/components/sections/CTA"
+import Navbar from "@/components/Navbar";
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -39,23 +42,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col overflow-x-hidden">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto flex h-16 items-center justify-between px-2">
-          <div className="flex items-center gap-2">
-            <Image
-              src={logo}
-              alt="Live Life In The Black logo"
-              width={40}
-              height={40}
-              className="h-10 w-10"
-            />
-            <span className="text-base lg:text-lg font-semibold text-black font-montserrat">Live Life In The Black</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button className="bg-amber-400 hover:bg-amber-500 text-black" onClick={handleClick} >Join the Waitlist</Button>
-          </div>
-        </div>
-      </header>
+      <Navbar />
       <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
         <main >
           {/* Hero Section */}
@@ -71,7 +58,8 @@ export default function Home() {
 
           {/* Social Proof Section add back in when get content */}
           {/* <Proof /> */}
-
+          <Testimonials />
+          <About />
           {/* Feature/Benefit Section (Workshop Curriculum) */}
           {/* <Workshop/> */}
 

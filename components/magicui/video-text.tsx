@@ -127,7 +127,7 @@ export function VideoText({
                 }}
             >
                 <video
-                    className="w-full h-full object-cover"
+                    className="w-full h-full max-h-[50vh] object-cover"
                     autoPlay={autoPlay}
                     muted={muted}
                     loop={loop}

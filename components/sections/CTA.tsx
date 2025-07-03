@@ -7,7 +7,7 @@ import SubscribeForm from "@/components/SubscribeForm"
 
 const CTA = forwardRef<HTMLDivElement, React.ComponentPropsWithoutRef<'div'>>((props, ref) => {
     return (
-        <section id="CTA" ref={ref} className="h-full bg-purple-500 text-white px-5 py-10">
+        <section id="CTA" ref={ref} className="h-full bg-[#00759550] text-white px-5 py-10">
             <div className="container" id="final-call">
                 <div className="max-w-3xl mx-auto space-y-8 text-center">
                     <div className='flex flex-col space-y-5'>
@@ -39,7 +39,7 @@ const CTA = forwardRef<HTMLDivElement, React.ComponentPropsWithoutRef<'div'>>((p
                         Join the VIP waitlist now. Get first access to workshop dates, exclusive early bird discounts, and bonus
                         financial tips sent straight to your inbox.
                     </p> */}
-                    <p className="text-lg font-semibold bg-purple-600 p-4 rounded-lg inline-block">
+                    <p className="text-lg font-semibold bg-[#007595] p-4 rounded-lg inline-block">
                         FREE Bonus: Get our '5 Simple Money Moves Young Professionals Can Make This Week' checklist instantly
                         when you sign up!
                     </p>

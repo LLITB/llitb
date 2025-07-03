@@ -9,7 +9,7 @@ const Help = () => {
                     initial={{ y: 48, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ ease: "easeInOut", duration: 0.8 }}
-                    className="text-3xl md:text-4xl font-bold font-montserrat text-center mb-10">At the Wealthy Mindset Workshop you will learn...</motion.h2>
+                    className="text-4xl md:text-5xl font-bold font-clashDisplay text-center mb-10 text-shadow-sm/20 text-shadow-[#d100cb]">At the Wealthy Mindset Workshop you will learn...</motion.h2>
                 <motion.div
                     initial={{ y: 48, opacity: 0.5 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -22,7 +22,7 @@ const Help = () => {
                         className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                         <div className="flex items-start gap-4">
                             <div className="bg-purple-100 p-3 rounded-full">
-                                <DollarSign className="h-6 w-6 text-purple-500" />
+                                <DollarSign className="h-6 w-6 text-[#007595]" />
                             </div>
                             <div>
                                 <h3 className="text-lg lg:text-2xl font-bold mb-2 font-opensans">Your digital financial profile</h3>
@@ -40,7 +40,7 @@ const Help = () => {
                         className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                         <div className="flex items-start gap-4">
                             <div className="bg-purple-100 p-3 rounded-full">
-                                <PiggyBank className="h-6 w-6 text-purple-500" />
+                                <PiggyBank className="h-6 w-6 text-[#007595]" />
                             </div>
                             <div>
                                 <h3 className="text-lg lg:text-2xl font-bold mb-2 font-opensans">Strategic Cash Management</h3>
@@ -58,7 +58,7 @@ const Help = () => {
                         className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                         <div className="flex items-start gap-4">
                             <div className="bg-purple-100 p-3 rounded-full">
-                                <Target className="h-6 w-6 text-purple-500" />
+                                <Target className="h-6 w-6 text-[#007595]" />
                             </div>
                             <div>
                                 <h3 className="text-lg lg:text-2xl font-bold mb-2 font-opensans">Prepare for the Unknown</h3>
@@ -76,7 +76,7 @@ const Help = () => {
                         className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                         <div className="flex items-start gap-4">
                             <div className="bg-purple-100 p-3 rounded-full">
-                                <LineChart className="h-6 w-6 text-purple-500" />
+                                <LineChart className="h-6 w-6 text-[#007595]" />
                             </div>
                             <div>
                                 <h3 className="text-lg lg:text-2xl font-bold mb-2 font-opensans">Establish Obtainable Current and Long-term Goals</h3>
@@ -92,7 +92,7 @@ const Help = () => {
                         transition={{ staggerChildren: 0.8, delayChildren: 2.5 }} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                         <div className="flex items-start gap-4">
                             <div className="bg-purple-100 p-3 rounded-full">
-                                <Clock className="h-6 w-6 text-purple-500" />
+                                <Clock className="h-6 w-6 text-[#007595]" />
                             </div>
                             <div>
                                 <h3 className="text-lg lg:text-2xl font-bold mb-2 font-opensans">Retire in Style</h3>
@@ -108,7 +108,7 @@ const Help = () => {
                         transition={{ staggerChildren: 0.8, delayChildren: 2.5 }} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
                         <div className="flex items-start gap-4">
                             <div className="bg-purple-100 p-3 rounded-full">
-                                <Umbrella className="h-6 w-6 text-purple-500" />
+                                <Umbrella className="h-6 w-6 text-[#007595]" />
                             </div>
                             <div>
                                 <h3 className="text-lg lg:text-2xl font-bold mb-2 font-opensans">Legacy of Debt or Wealth?</h3>

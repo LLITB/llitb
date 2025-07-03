@@ -1,12 +1,42 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Toaster } from "@/components/ui/sonner"
-import { Inter } from "next/font/google"
+import { Inter, Montserrat } from "next/font/google"
 import "./globals.css"
 import Link from "next/link"
-const inter = Inter({ subsets: ["latin"] })
+import localFont from "next/font/local";
+
+const clashDisplay = localFont({
+  src: [
+    {
+      path: './fonts/ClashDisplay-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-clashDisplay',
+  display: 'swap',
+})
+const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+      },
+      {
+        rel: "icon",
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+      },
+    ],
+  },
   title: "Financial Literacy Workshop for Young Pros | Live Life In The Black",
   description:
     "Stop money stress! Join the waitlist for our financial literacy workshop designed for young professionals. Learn budgeting, saving, investing & more. Get early access!",
@@ -27,17 +57,17 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${montserrat.className} ${clashDisplay.className} ${clashDisplay.variable}`}>
         {children}
         <footer className="py-6 border-t h-full my-7">
           <div className="container mx-auto">
             <div className="px-5 py-6">
-              <h3 className="font-semibold text-3xl">LLITB Disclosure: </h3>
-              <p>Information presented is for educational purposes only and does not intend to make an offer or solicitation for the sale or purchase of any specific securities, investments, or investment strategies. Investments involve risk and unless otherwise stated, are not guaranteed. Commentary of any kind on this site is based on our own opinion and analysis, and not representative of future performance of any security or market. Personalized investment advice can only be rendered after engagement of the firm for services, execution of the required documentation, and receipt of required disclosures. Please contact the firm for further information. Information presented is not intended as tax or legal advice. Please consult legal or tax professionals for specific information regarding your individual situation.  Copyright © 2025 Live Life in the Black®.</p>
+              <h4 className="font-medium text-sm"> Disclosure </h4>
+              <p className=" text-xs font-light">Information presented is for educational purposes only and does not intend to make an offer or solicitation for the sale or purchase of any specific securities, investments, or investment strategies. Investments involve risk and unless otherwise stated, are not guaranteed. Commentary of any kind on this site is based on our own opinion and analysis, and not representative of future performance of any security or market. Personalized investment advice can only be rendered after engagement of the firm for services, execution of the required documentation, and receipt of required disclosures. Please contact the firm for further information. Information presented is not intended as tax or legal advice. Please consult legal or tax professionals for specific information regarding your individual situation.  Copyright © 2025 Live Life in the Black®.</p>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-gray-600">
-                &copy; {new Date().getFullYear()} Live Life In The Black. All rights reserved.
+                &copy; {new Date().getFullYear()} Live Life In The Black®. All rights reserved.
               </p>
               <div className="flex gap-4">
                 <Link href="#" className="text-sm text-gray-600 hover:text-purple-500">

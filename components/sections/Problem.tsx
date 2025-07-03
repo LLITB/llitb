@@ -12,7 +12,7 @@ const Problem = () => {
                         initial={{ y: 48, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 1.5 }}
-                        className="text-4xl md:text-5xl font-bold font-montserrat mb-10">
+                        className="text-4xl md:text-5xl font-bold font-clashDisplay mb-10">
                         Is Money Stress Running Your Life?
                     </motion.h2>
                     <ProblemItem item="How do I manage debt and student loans?" />
@@ -24,7 +24,7 @@ const Problem = () => {
                         initial={{ y: 48, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 0.75 }}
-                        className="text-2xl font-semibold text-purple-500 text-center mt-8">There is a clear path forward.</motion.p>
+                        className="text-2xl font-semibold text-[#007595] text-center mt-8">There is a clear path forward.</motion.p>
                 </div>
             </div>
         </section>

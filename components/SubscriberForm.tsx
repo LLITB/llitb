@@ -67,8 +67,8 @@ export default function SubscriberForm() {
                         {state?.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
                     </div>
 
-                    <Button type="submit" className="w-full" disabled={pending}>
-                        {pending ? "Subscribing..." : "Subscribe"}
+                    <Button type="submit" className="w-full bg-[#f1bb32] text-black" disabled={pending}>
+                        {pending ? "Subscribing..." : "Join Waitlist"}
                     </Button>
                 </form>
             </CardContent>

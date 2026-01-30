@@ -12,6 +12,7 @@ import Solutions from "@/components/sections/Solutions"
 import Help from "@/components/sections/Help"
 import Proof from "@/components/sections/Proof";
 import Testimonials from "@/components/sections/Testimonials";
+import MediumArticles from "@/components/sections/MediumArticles";
 import About from "@/components/sections/About";
 // import Workshop from "@/components/sections/Workshop"
 import CTA from "@/components/sections/CTA"
@@ -59,6 +60,7 @@ export default function Home() {
           {/* Social Proof Section add back in when get content */}
           {/* <Proof /> */}
           <Testimonials />
+          <MediumArticles />
           <About />
           {/* Feature/Benefit Section (Workshop Curriculum) */}
           {/* <Workshop/> */}

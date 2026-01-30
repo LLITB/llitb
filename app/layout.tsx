@@ -1,3 +1,25 @@
+// Polyfill for broken localStorage in Node.js 25+
+if (typeof localStorage !== 'undefined' && typeof localStorage.getItem === 'undefined') {
+  try {
+    Object.defineProperty(globalThis, 'localStorage', {
+      value: {
+        getItem: () => null,
+        setItem: () => { },
+        removeItem: () => { },
+        clear: () => { },
+        key: () => null,
+        length: 0
+      },
+      configurable: true,
+      writable: true,
+      enumerable: true
+    });
+  } catch (e) {
+    // Fallback if defineProperty fails
+    console.warn("Failed to polyfill localStorage:", e);
+  }
+}
+
 import type React from "react"
 import type { Metadata } from "next"
 import { Toaster } from "@/components/ui/sonner"
